@@ -65,7 +65,7 @@
     height: 155px;
     margin: -25em 0 25px;
     padding: 220px 30px 30px;
-    background-image: url("/assets/images/background/pizza-background.jpg");
+    background-image: url("assets/pizza-background.jpg");
     }
     
     header .notice {
