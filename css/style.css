@@ -1,0 +1,379 @@
+/* Import Google Fonts */
+/* Import Lato font with all weights */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+/* Import Poppins font with all weights */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.item-added-overlay {
+    position: fixed;
+    top: 10rem;
+    background-color: #feb323;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    right: 50%;
+    transform: translateX(50%);
+    color: white;
+    z-index: 999999;
+    display: none;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 100px;
+    right: 120px;
+    z-index: 99;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 10px;
+    width: auto;
+    min-width: 80px;
+    line-height: 1.5;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+/* notice styles */
+/* end |  */
+
+*, *::before, *::after {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #1a1a1a;
+}
+
+    /* background-color: #feb323; */
+    /* text-align: center; */
+    /* padding: 20px; */
+
+
+.hero {
+  min-height: 950px;
+  background-image: url("/assets/images/background/pizza-background.jpg");
+  height: 155px;
+  margin: -25em 0 25px;
+  padding: 220px 30px 30px;
+}
+
+header .notice {
+    color: #1a1a1a;
+    transform: translateY(-120%);
+}
+
+.hero .container-headings {
+    position: absolute;
+    top: 25%;
+    color: white;
+    font-size: 3rem;
+    font-weight: 400;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 75%;
+    transform: translate(16.5%, -5.4%);
+    margin-top: 0%;
+    gap: 25px;
+    justify-self: center;
+}
+
+.flex-card {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 450px;
+    width: 350px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    z-index: 999;
+}
+
+.flex-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+}
+
+.title {
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-top: 1.5rem;
+}
+
+.subhead {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-style: italic;
+    font-weight: 300;
+    color: #111111;
+}
+
+.price {
+    color: #e73d0c;
+    font-weight: 700;
+    font-size: 1.2em;
+    text-align: center;
+    bottom: 0;
+    margin-top: auto;
+    line-height: 4;
+}
+
+.add-to-card {
+    background-color: #feb323;
+    padding: 15px 40px;
+    border-radius: 0px;
+    color: #1a1a1a;
+    font-weight: 600;
+    font-size: .9rem;
+    color: #111111;
+
+}
+
+/* footer styling */
+
+footer {
+    color: white;
+    background-color: #feb323;
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+    position: sticky;
+    margin: 15px 0 0 0;
+}
+
+/* responsive styling */
+
+.add-to-card {
+  background-color: #feb323;
+  padding: 15px 40px;
+  border-radius: 0px;
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: .9rem;
+  color: #111111;
+}
+
+/* animations */
+.price {
+    rotate: 360deg;
+    transform: translateY(65%);
+    animation: loadInAnimPrice 4.3s ease forwards;
+}
+
+.hero .container-headings h1 {
+    transform: scale(0);
+    animation: scaleImageUp 3.5s ease forwards;
+}
+
+.flex-card img {
+    transform: scale(0);
+    animation: scaleImageUp 3.5s ease forwards;
+}
+
+.flex-card {
+    transform: translateY(100%);
+    animation: riseScreen 3.5s ease forwards;
+}
+
+@keyframes riseScreen{
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes loadInAnimPrice {
+    to {
+        rotate: 360deg;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleImageUp {
+    to {
+        transform: scale(1);
+    }
+}
+
+.preloader {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 99999;
+    animation: preload 3.5s ease-in forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 74px;
+    color: #feb323;
+    display: flex;
+    justify-content: center;
+    border: 12px solid black;
+}
+
+.preloader img {
+    width: 250px;
+    height: 250px;
+    animation: preloaderImage 3s ease-in forwards;
+    transform: rotate(90deg);
+}
+
+body {
+    animation: disableScroll 15s ease forwards;
+}
+
+
+@keyframes preloaderImage {
+    from {
+        transform: rotate(90deg);
+
+    }
+
+    to {
+        transform: rotate(500deg);
+    }
+}
+
+@keyframes preload {
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes  disableScroll{
+    from {
+        overflow: hidden;
+    }
+
+    to {
+        overflow-y: scroll;
+    }
+}
+
+
+/* end of animations |load in styling */
+
+@media screen and (max-width: 1425px) {
+    .hero h1 {
+        display: none;
+    }
+    
+    header {
+        background-color: #feb323;
+        color: white;
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 999;
+        font-size: 1rem;
+        text-transform: uppercase;
+        padding: 15px;
+    }
+
+    header {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1210px) {
+    #back-to-top {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    #back-to-top {
+        display: none;
+        background-color: transparent;
+        color: ;
+    }
+}
+
+@media screen and (max-width: 233px) {
+    header {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width: 561px) {
+    .flex-container {
+        transform: translateX(18%);
+    }
+
+    body {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 555px) {
+    .hero {
+        min-height: 950px;
+      }
+    
+}
+
+@media screen and (max-width: 443px) {
+    .hero {
+        transform: translateY(20%);
+    }
+}
+
+@media screen and (max-width: 240px) {
+    .hero {
+        transform: translate(0%, 30%);
+    }
+
+    body {
+        background-color: #feb323;
+    }
+
+    header {
+        background-color: #1a1a1a;
+    }
+
+    footer {
+    background-color: #1a1a1a;
+    }
+}
+
+/* preloader placed to not have confused */
+
+
+
+
