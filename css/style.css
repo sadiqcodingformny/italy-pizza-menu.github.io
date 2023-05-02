@@ -170,8 +170,7 @@
     padding: 20px;
     text-align: center;
     font-size: 1rem;
-    position: sticky;
-    margin: 15px 0 0 0;
+    width: 100%;
     }
 
 /* responsive styling */
@@ -247,6 +246,8 @@
     
     footer {
     background-color: #1a1a1a;
+    position: sticky;
+    top: 200%;
     }
     }
 
@@ -254,13 +255,13 @@
     /* animations */
 .price {
     rotate: 360deg;
-    transform: translateY(65%);
+    transform: translateY(55%);
     animation: loadInAnimPrice 3.5s ease forwards;
     }
     
     .hero .container-headings h1 {
     transform: scale(0);
-    animation: scaleImageUp 1.5s ease forwards;
+    animation: scaleImageUp 1.3s ease forwards;
     }
     
     .flex-card img {
@@ -269,8 +270,9 @@
     }
     
     .flex-card {
-    transform: translateY(100%);
-    animation: riseScreen 2.1s ease forwards;
+    transform: translateY(50%);
+    /* transform: translateY(-30%);  - Uncover Title*/
+    animation: riseScreen 2s ease forwards;
     }
     
     @keyframes riseScreen{
