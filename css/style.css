@@ -65,7 +65,7 @@
     height: 155px;
     margin: -25em 0 25px;
     padding: 220px 30px 30px;
-    background-image: url("assets/pizza-background.jpg");
+    background-image: url("/assets/pizza-background.jpg");
     }
     
     header .notice {
@@ -177,6 +177,7 @@
 @media screen and (max-width: 1425px) {
     .hero h1 {
     display: none;
+    font-size: 1em;
     }
     
     header {
@@ -217,40 +218,6 @@
         height: auto;
     }
     }
-    
-    @media screen and (max-width: 555px) {
-    .hero {
-    min-height: 950px;
-    }
-    
-    }
-    
-    @media screen and (max-width: 443px) {
-    .hero {
-    transform: translateY(20%);
-    }
-    }
-    
-    @media screen and (max-width: 240px) {
-    .hero {
-    transform: translate(0%, 30%);
-    }
-    
-     header {
-        background-color: #feb323;
-    }
-    
-    header {
-        background-color: #1a1a1a;
-    }
-    
-    footer {
-    background-color: #1a1a1a;
-    position: sticky;
-    top: 200%;
-    }
-    }
-
     
     /* animations */
 .price {
